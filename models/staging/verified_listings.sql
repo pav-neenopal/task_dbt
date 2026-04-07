@@ -13,3 +13,5 @@ final AS (SELECT * FROM verified_listings)
 
 SELECT * FROM final
 -- Added final cte to follow best practices
+
+
