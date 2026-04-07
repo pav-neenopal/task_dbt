@@ -10,3 +10,5 @@ WHERE host_identity_verified = 'verified'
 )
 
 SELECT * FROM verified_listings
+
+-- Main branch prefers this
