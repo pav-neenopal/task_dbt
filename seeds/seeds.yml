@@ -1,0 +1,12 @@
+version: 2
+
+seeds:
+  - name: birthdays
+    config:
+      database: AIRBNB
+      schema: RAW 
+  
+  - name: full_moon_dates
+    config:
+      database: AIRBNB
+      schema: RAW

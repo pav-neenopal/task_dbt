@@ -1,0 +1,16 @@
+version: 2
+
+exposures:
+
+  - name: nbd_listings_dashboard
+    type: dashboard
+    description: This is a dashboard which informs listings of a particular neighbourhood
+
+    depends_on:
+      - ref('nbd_filter_listings')
+      - ref('clean_listings')
+      - source('airbnb', 'data')
+
+    owner:
+      name: Pavan Kumar P
+      email: pavankumarpulipaka224@gmail.com

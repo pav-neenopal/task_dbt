@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: airbnb
+    database: AIRBNB
+    schema: RAW
+    config:
+      enabled: true 
+      freshness:
+        warn_after:
+          count: 90
+          period: hour
+    tables:
+      - name: data
+    

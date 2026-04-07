@@ -1,0 +1,51 @@
+version: 2
+models:
+  - name: verified_listings
+    description: "Staging model of intermediate model cleaned listings"
+    columns:
+      - name: listing_id
+        description: "Unique identifier for each listing"
+        tests:
+          - not_null_generic
+  
+
+  - name: country_filter_listings
+    description: "Creates a view of a country's listings which is a variable"
+    columns:
+      - name: listing_id
+        description: "Unique identifier for each listing"
+      - name: country
+        description: "Only one country which has been passed as variable for filter"
+
+  - name: nbd_filter_listings
+    description: "Creates a view of a particular neighbourhood's listings which is a variable"
+    columns:
+      - name: listing_id
+        description: "Unique identifier for each listing"
+        tests:
+          - dbt_utils.expression_is_true:
+              arguments:
+                expression: "is NOT NULL"        
+      - name: neighbourhood
+        description: "Only one neighbourhood which has been passed as variable for filter"
+    meta:
+      owner: "bidev@airbnb.com"
+      team: "Business Intelligence"
+
+
+  - name: nbd_union_listings
+    description: "Takes in single or multiple neighbourhoods and returns the union of all"
+    columns:
+      - name: listing_id
+        description: "Unique identifier for each listing"
+      - name: neighbourhood
+        description: "Only one neighbourhood which has been passed as variable for filter"
+    meta:
+      owner: "data_analyst@airbnb.com"
+      team: "analytics"
+
+  - name: qa_invalid_data
+    description: "A view model of invalid data with host_identity_verified column as NULL"
+    meta:
+      owner: "data_analyst@airbnb.com"
+      team: "analytics"

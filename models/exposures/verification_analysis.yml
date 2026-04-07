@@ -1,0 +1,17 @@
+version: 2
+
+exposures:
+
+  - name: verification_analysis
+    type: analysis
+    description: This is an analysis of percentage of verified listings
+
+    depends_on:
+      - ref('verified_listings')
+      - ref('clean_listings')
+      - test('not_null_generic')
+      - source('airbnb', 'data')
+
+    owner:
+      name: Pavan Kumar P
+      email: pavankumarpulipaka224@gmail.com
