@@ -7,6 +7,9 @@ WITH cleaned_listings AS (
 verified_listings AS (
 SELECT * FROM cleaned_listings
 WHERE host_identity_verified = 'verified'
-)
+),
 
-SELECT * FROM verified_listings
+final AS (SELECT * FROM verified_listings)
+
+SELECT * FROM final
+-- Added final cte to follow best practices
