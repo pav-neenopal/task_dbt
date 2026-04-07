@@ -9,7 +9,6 @@ exposures:
     depends_on:
       - ref('verified_listings')
       - ref('clean_listings')
-      - test('not_null_generic')
       - source('airbnb', 'data')
 
     owner:
