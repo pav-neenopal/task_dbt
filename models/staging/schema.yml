@@ -8,6 +8,7 @@ models:
     columns:
       - name: listing_id
         description: "Unique identifier for each listing"
+        data_type: int
         tests:
           - not_null_generic
   
