@@ -7,6 +7,10 @@ WITH raw_listings AS (
 filter_listings AS (
     SELECT * FROM raw_listings
     WHERE country = '{{var("country_filter")}}'
-)
+),
 
-SELECT * FROM filter_listings
+final AS (SELECT * FROM filter_listings)
+
+SELECT * FROM final
+
+-- Added final CTE to follow best practice
