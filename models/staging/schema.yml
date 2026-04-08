@@ -2,6 +2,9 @@ version: 2
 models:
   - name: verified_listings
     description: "Staging model of intermediate model cleaned listings"
+    config:
+      contract:
+        enforced: true
     columns:
       - name: listing_id
         description: "Unique identifier for each listing"
