@@ -30,7 +30,7 @@ clean-targets:         # directories to be removed by `dbt clean`
 vars:
   country_filter: "United States"
   materialization_type: "view"
-  nbd_filter: ["East Village"]
+  nbd_filter: ["East Village", "Woodside"]
 
 # In this example config, we tell dbt to build all models in the example/
 # directory as views. These settings can be overridden in the individual model
