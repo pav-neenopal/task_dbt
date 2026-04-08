@@ -11,6 +11,21 @@ models:
         data_type: int
         tests:
           - not_null_generic
+      - name: listing_name
+        description: "Name corresponding to the listing_id"
+        data_type: varchar
+      - name: host_id
+        data_type: number
+      - name: host_identity_verified
+        data_type: varchar
+      - name: country
+        data_type: varchar
+      - name: neighbourhood
+        data_type: varchar
+      - name: room_type
+        data_type: varchar
+      - name: construction_year
+        data_type: int
   
 
   - name: country_filter_listings
