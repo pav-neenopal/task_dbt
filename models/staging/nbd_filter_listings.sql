@@ -13,6 +13,12 @@ nbd_listings AS (
             '{{ nbd }}'{% if not loop.last %},{% endif %}
         {% endfor %}
     )
+),
+
+final AS (
+    SELECT * FROM nbd_listings
 )
 
-SELECT * FROM nbd_listings
+SELECT * FROM final
+
+-- Include final CTE to follow best practices
