@@ -82,3 +82,11 @@ models:
       meta:
         owner: "data_analyst@airbnb.com"
         team: "analytics"
+
+  - name: fct_reviews
+    description: "This is an incremental fact reviews model, derived from clean_listings intermediate model"
+    config:
+      meta:
+        owner: "data_analyst@airbnb.com"
+        team: "analytics"
+      tags: ["fact"]
