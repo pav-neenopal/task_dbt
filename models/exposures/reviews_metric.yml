@@ -1,0 +1,15 @@
+version: 2
+
+exposures:
+
+  - name: monthly_revenue
+    type: dashboard
+    description: This is a metric for downstream BI dashboard
+
+    depends_on:
+      - ref('fct_reviews')
+      - ref('clean_reviews')
+
+    owner:
+      name: Pavan Kumar P
+      email: pavanBIdeveloper@gmail.com
