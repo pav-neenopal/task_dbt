@@ -26,6 +26,14 @@ models:
         data_type: varchar
       - name: construction_year
         data_type: int
+      - name: cancellation_policy
+        data_type: varchar
+      - name: review_count
+        data_type: number
+      - name: price_dollars
+        data_type: float
+      - name: service_fee_dollars
+        data_type: float
   
 
   - name: country_filter_listings
