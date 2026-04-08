@@ -1,7 +1,7 @@
 {{config(tags = ["data_review"])}}
 
 WITH final AS (
-  SELECT * FROM {{ref('verfied_listings')}}
+  SELECT * FROM {{ref('verified_listings')}}
 )
 
 SELECT * FROM final LIMIT 10
