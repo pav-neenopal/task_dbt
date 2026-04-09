@@ -9,6 +9,7 @@ exposures:
     depends_on:
       - ref('fct_reviews')
       - ref('clean_reviews')
+      - ref('reviews_dashboard_metric')
 
     owner:
       name: Pavan Kumar P
