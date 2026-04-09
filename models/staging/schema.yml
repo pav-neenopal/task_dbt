@@ -90,3 +90,13 @@ models:
         owner: "data_analyst@airbnb.com"
         team: "analytics"
       tags: ["fact"]
+
+  - name: reviews_date_summary
+    description: "This is summary of reviews for each listing id mentioning the age of latest review in weeks"
+    columns:
+      - name: listing_id
+        description: "Unique identifier for each listing"
+      - name: review_count
+        description: "Roll up count of reviews for each listing id"
+      - name: weeks_since_last_review
+        description: "Age of the latest review in weeks"
